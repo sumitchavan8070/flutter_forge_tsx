@@ -1,16 +1,16 @@
+'use client'
+
 import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
-
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Blog Details Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Details Page for Startup Nextjs Template",
-  // other metadata
-};
+import { useSearchParams } from 'next/navigation'
 
 const BlogDetailsPage = () => {
+  const searchParams = useSearchParams();
+
+  const id = searchParams.get('id');
+  const image = searchParams.get('image');
+  
   return (
     <>
       <section className="pb-[120px] pt-[150px]">
@@ -111,7 +111,7 @@ const BlogDetailsPage = () => {
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                       <Image
-                        src="/images/blog/blog-details-02.jpg"
+                        src={image}
                         alt="image"
                         fill
                         className="object-cover object-center"
