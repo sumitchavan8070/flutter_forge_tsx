@@ -6,7 +6,7 @@ Follow these steps to set up and run the project locally:
 
 1. **Clone the Repository**
    ```sh
-   git clone https://github.com/sumitchavan8070/shreejiweddingclothes.git
+   git clone https://github.com/sumitchavan8070/flutter_forge_tsx.git
    cd startup-nextjs-template
    ```
 
